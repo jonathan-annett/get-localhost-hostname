@@ -5,7 +5,7 @@
     "email": "jonathan.max.annett@gmail.com"
   },
   "contributors": [],
-  "description": "newly created repo",
+  "description": "in most cases, returns 'localhost'. returns 'penguin.termina.linux.test' if node.js is running on a chromebook",
   "license": "MIT",
   "dependencies": {
   },
