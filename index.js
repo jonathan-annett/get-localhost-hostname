@@ -1,10 +1,14 @@
-
-var
+var 
+os = require("os"),
+lookup_os_linux_name   = require("./detect_os_name"),
 //chromebooks do something funky with localhost under penguin/crostini, so help a coder out....
 hostname = module.exports = (isChromebook() ? "penguin.termina.linux.test" : "localhost");
 
+
 function isChromebook() {
-    var os = require("os");
+    
+    if (lookup_os_linux_name()==='chromeos') return true;
+    
     if (os.hostname()==="penguin" && os.platform()==="linux") {
         var run=require("child_process").execSync;
         try {
