@@ -1,7 +1,7 @@
 
 var 
 
-hosthame=require(".");
+hostname=require(".");
 
 module.exports = function(app,port,uri) {
     var listener = app.listen(port||0,function(){
