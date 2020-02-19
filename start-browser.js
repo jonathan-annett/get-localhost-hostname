@@ -1,6 +1,6 @@
 var detect_os_name = require("./detect_os_name"); 
 var this_os=detect_os_name();
-var hostname=detect_os_name.hostname;
+var hostname=require(".");
 
 var child_process = require("child_process") ;
 var spawnSync = child_process.spawnSync;

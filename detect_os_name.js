@@ -27,5 +27,4 @@ lookup_os_linux_name   = function() {
     return os_linux_name;
 };
 
-
 module.exports = lookup_os_linux_name;
