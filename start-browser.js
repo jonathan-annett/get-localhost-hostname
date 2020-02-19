@@ -55,7 +55,10 @@ module.exports = function(app,port,uri,cb) {
     var listener = app.listen(port||0,function(){
         var url="http://"+hostname+":"+listener.address().port+(uri?uri:'/');
         console.log("goto to "+url);
-        module.exports.open_browser(url,cb);
+        module.exports.open_browser(url,typeof cb==='function'?function(err,child){
+            if (err) return cb(err);
+            cb(null,child,app,port,url);
+        }:undefined);
     });
 };
 
